@@ -21,7 +21,7 @@ defmodule CompanyReportsEx do
     |> Enum.reduce(build_report_acc(), fn line, report -> sum_values(line, report) end)
   end
 
-  def build_report_acc() do
+  defp build_report_acc() do
     all_hours = Enum.into(@employees, %{}, &{&1, 0})
     hours_per_month = Enum.into(@employees, %{}, &{&1, %{}})
     hours_per_year = Enum.into(@employees, %{}, &{&1, %{}})
