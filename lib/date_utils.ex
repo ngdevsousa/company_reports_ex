@@ -32,7 +32,7 @@ defmodule CompanyReportsEx.DateUtils do
 
   def get_month_string(index, kind) when kind in @kinds and index >= 0 and index <= 12 do
     case kind do
-      "en-Us" -> Enum.at(@en_US, index - 1)
+      "en-US" -> Enum.at(@en_US, index - 1)
       "pt-BR" -> Enum.at(@pt_BR, index - 1)
     end
   end
